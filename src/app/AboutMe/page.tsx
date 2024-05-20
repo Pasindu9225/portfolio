@@ -38,24 +38,24 @@ const AboutMe = () => {
         </h2>
         <div className="mt-8 text-lg text-gray-700 dark:text-gray-300">
           <p>
-            I'm currently an undergraduate at the University of Sri
+            ' I'm currently an undergraduate at the University of Sri
             Jayawardhanapura, where I am pursuing my studies with a focus on
             computer science and software development. Over the past year, I
             have gained valuable experience in front-end development, honing my
-            skills in creating dynamic, user-friendly web interfaces.
+            skills in creating dynamic, user-friendly web interfaces.'
           </p>
           <p className="mt-4">
-            Recently, I have started training in full-stack development,
+            ' Recently, I have started training in full-stack development,
             expanding my knowledge to include back-end technologies and
             practices. I am passionate about building seamless, efficient web
             applications and am always eager to learn and apply new
-            technologies.
+            technologies.'
           </p>
           <p className="mt-4">
-            In addition to my technical skills, I am a problem solver at heart
+            ' In addition to my technical skills, I am a problem solver at heart
             and enjoy tackling complex challenges. My goal is to contribute to
             innovative projects that make a positive impact and to continually
-            grow as a developer.
+            grow as a developer.'
           </p>
         </div>
         <div className="mt-8 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
