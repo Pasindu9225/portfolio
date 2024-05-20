@@ -92,14 +92,14 @@ const Header = () => {
                   </DropdownMenuContent>
                 </DropdownMenu>
 
-                <SignedIn>
-                  {/* Display User Button when signed in */}
-                  <UserButton />
-                </SignedIn>
-                <SignedOut>
-                  {/* Display Sign In button when signed out */}
-                  <SignInButton />
-                </SignedOut>
+                {/* <SignedIn> */}
+                {/* Display User Button when signed in */}
+                {/* <UserButton /> */}
+                {/* </SignedIn> */}
+                {/* <SignedOut> */}
+                {/* Display Sign In button when signed out */}
+                {/* <SignInButton /> */}
+                {/* </SignedOut> */}
               </div>
 
               <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 dark:bg-gray-700 dark:text-gray-300 md:hidden">

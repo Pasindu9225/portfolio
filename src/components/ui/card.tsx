@@ -1,7 +1,21 @@
 import React from "react";
 import Image from "next/image";
+import image from "../../../public/HiRes-17.jpg";
 
-const Card = ({ project }: any) => {
+interface Project {
+  title: string;
+  description: string;
+  technology: (
+    | string
+    | number
+    | boolean
+    | React.ReactNode
+    | null
+    | undefined
+  )[];
+}
+
+const Card = ({ project }: { project: Project }) => {
   return (
     <div>
       <a
@@ -10,8 +24,10 @@ const Card = ({ project }: any) => {
       >
         <Image
           alt={project.title}
-          src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
+          src={image}
           className="h-56 w-full rounded-md object-cover"
+          width={1770}
+          height={1180}
         />
         <div className="mt-2">
           <dl>
@@ -26,29 +42,34 @@ const Card = ({ project }: any) => {
           </dl>
           <div className="mt-6 flex items-center gap-4 text-md">
             <p>Used technologies:</p>
-            {project.technology.map(
-              (
-                tech:
-                  | string
-                  | number
-                  | bigint
-                  | boolean
-                  | React.ReactElement<
-                      any,
-                      string | React.JSXElementConstructor<any>
-                    >
-                  | Iterable<React.ReactNode>
-                  | React.ReactPortal
-                  | Promise<React.AwaitedReactNode>
-                  | null
-                  | undefined,
-                index: React.Key | null | undefined
-              ) => (
-                <span key={index} className="inline-flex items-center gap-2">
-                  {tech}
-                </span>
-              )
-            )}
+            {project.technology.map((tech, index) => {
+              // Check if the tech is a valid ReactNode
+              if (
+                typeof tech === "string" ||
+                typeof tech === "number" ||
+                typeof tech === "boolean" ||
+                React.isValidElement(tech)
+              ) {
+                return (
+                  <span key={index} className="inline-flex items-center gap-2">
+                    {tech}
+                  </span>
+                );
+              } else if (
+                tech !== null &&
+                tech !== undefined &&
+                typeof tech.toString === "function"
+              ) {
+                // Convert other types to string and render them
+                return (
+                  <span key={index} className="inline-flex items-center gap-2">
+                    {tech.toString()}
+                  </span>
+                );
+              } else {
+                return null;
+              }
+            })}
           </div>
         </div>
       </a>
