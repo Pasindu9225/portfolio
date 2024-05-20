@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Card = ({ project }: any) => {
   return (
@@ -7,7 +8,7 @@ const Card = ({ project }: any) => {
         href="#"
         className="block rounded-lg p-4 dark:bg-slate-600 dark:shadow-none shadow-sm shadow-indigo-100"
       >
-        <img
+        <Image
           alt={project.title}
           src="https://images.unsplash.com/photo-1613545325278-f24b0cae1224?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
           className="h-56 w-full rounded-md object-cover"

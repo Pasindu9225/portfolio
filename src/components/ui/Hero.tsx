@@ -6,7 +6,7 @@ const Hero = () => {
       <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 bg-clip-text text-3xl font-extrabold text-transparent sm:text-5xl">
-            Hi, I'm <span className="block sm:inline">Pasindu</span>
+            Hi, I&apos;m <span className="block sm:inline">Pasindu</span>
           </h1>
           <p className="mt-4 text-3xl sm:text-5xl">
             A Passionate{" "}
@@ -16,7 +16,7 @@ const Hero = () => {
           </p>
           <p className="mx-auto mt-4 max-w-xl text-gray-700 dark:text-gray-300 sm:text-xl">
             I create dynamic and beautiful web applications using modern
-            technologies. Let's build something amazing together!
+            technologies. Let&apos;s build something amazing together!
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
