@@ -1,30 +1,30 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Alert from "@/components/ui/Alert";
 
-const page = () => {
-  const form = useRef();
+const ContactMe = () => {
+  const form = useRef<HTMLFormElement>(null);
+  const [alert, setAlert] = useState({ msg: "", type: "" });
 
-  const sendEmail = (e: { preventDefault: () => void }) => {
+  const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm("service_azc2r0z", "template_bxw7bok", form.current, {
-        publicKey: "w4OqstOckFuitp1ui",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          <Alert msg="Email sent successfully" />;
-          // Clear form fields after successful submission
-          form.current.reset();
-        },
-        (error) => {
-          <Alert msg={`Error: ${error.text}`} />;
-          console.log("FAILED...", error.text);
-        }
-      );
+    if (form.current) {
+      emailjs
+        .sendForm("service_azc2r0z", "template_bxw7bok", form.current, {
+          publicKey: "w4OqstOckFuitp1ui",
+        })
+        .then(
+          () => {
+            console.log("email send success");
+            // Clear form fields after successful submission
+            form.current?.reset();
+          },
+          (error) => {
+            console.log("cant send email", error);
+          }
+        );
+    }
   };
 
   return (
@@ -48,6 +48,7 @@ const page = () => {
                   id="name"
                   name="from_name"
                   className="mt-1 p-2 w-full border rounded-md bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
                 />
               </div>
               <div>
@@ -62,6 +63,7 @@ const page = () => {
                   id="email"
                   name="email"
                   className="mt-1 p-2 w-full border rounded-md bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
                 />
               </div>
               <div>
@@ -76,6 +78,7 @@ const page = () => {
                   name="message"
                   rows={4}
                   className="mt-1 p-2 w-full border rounded-md bg-gray-100 dark:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
                 ></textarea>
               </div>
               <div>
@@ -95,4 +98,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ContactMe;
