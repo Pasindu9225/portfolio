@@ -20,16 +20,17 @@ const Hero = () => {
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
             <a
-              href="/ContactMe"
+              href="/resume.jpg" // Direct path to the file in the public directory
+              download="resume.jpg"
               className="block w-full rounded border border-blue-600 bg-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-transparent hover:text-blue-600 dark:hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
             >
-              Contact Me
+              Resume
             </a>
             <a
-              href="/MyProject"
-              className="block w-full rounded border border-blue-600 px-12 py-3 text-sm font-medium text-blue-600 dark:text-white hover:bg-blue-600 hover:text-white dark:hover:bg-transparent focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
+              href="/ContactMe"
+              className="block w-full items-center justify-between rounded border border-blue-600 px-12 py-3 text-sm font-medium text-blue-600 dark:text-white hover:bg-blue-600 hover:text-white dark:hover:bg-transparent focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
             >
-              My Projects
+              Contact Me
             </a>
           </div>
         </div>
