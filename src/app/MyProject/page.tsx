@@ -17,7 +17,7 @@ const projects = [
   {
     id: 1,
     title: "portfolio",
-    description: "i made my portfolio",
+    description: "I made my portfolio",
     image: portfolio.src,
     link: "https://portfolio-eight-kappa-42.vercel.app/",
     technology: [
@@ -32,8 +32,8 @@ const projects = [
   {
     id: 2,
     title: "file sherer app",
-    description: "file shere app. you can shere your file",
-    link: "",
+    description: "File shere app. You can share your file",
+    link: "#",
     image: fileShareAppImage.src,
     technology: [
       <FaReact key="react" />,
@@ -46,7 +46,7 @@ const projects = [
   {
     id: 3,
     title: "movie app",
-    description: "there is a listed movis and details. used movie API",
+    description: "There is a listed movies and details. Used movie API",
     link: "https://movi-app-one.vercel.app/",
     image: movieApp.src,
     technology: [
@@ -58,9 +58,9 @@ const projects = [
   },
   {
     id: 4,
-    title: "movieApp",
-    description: "you can add your daily reminders",
-    link: "",
+    title: "ToDo App",
+    description: "You can add your daily reminders",
+    link: "#",
     image: ToDoApp.src,
     technology: [
       <FaReact key="react" />,
@@ -71,8 +71,8 @@ const projects = [
   },
   {
     id: 5,
-    title: "QR code generater",
-    description: "convert eny text to QR",
+    title: "QR code generator",
+    description: "Convert any text to QR",
     link: "https://qr-generator-blush.vercel.app/",
     image: QR.src,
     technology: [
