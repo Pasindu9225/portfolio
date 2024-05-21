@@ -3,37 +3,52 @@ import Card from "../../components/ui/card";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3Alt } from "react-icons/fa";
-import { TbBrandTypescript } from "react-icons/tb";
-import { SiClerk } from "react-icons/si";
 import { SiShadcnui } from "react-icons/si";
+import { SiClerk } from "react-icons/si";
+import portfolio from "@/../../public/Screenshot (158).png";
+import fileShareAppImage from "@/../../public/Screenshot (143).png";
+import movieApp from "@/../../public/Screenshot (165).png";
+import ToDoApp from "@/../../public/Screenshot (132).png";
+import QR from "@/../../public/Screenshot (166).png";
+import { FaCss3Alt } from "react-icons/fa6";
+import { TbBrandTypescript } from "react-icons/tb";
 
 const projects = [
   {
     id: 1,
-    title: "Project One",
-    description: "Description of project one.",
+    title: "portfolio",
+    description: "i made my portfolio",
+    image: portfolio.src,
+    link: "https://portfolio-eight-kappa-42.vercel.app/",
     technology: [
       <FaReact key="react" />,
       <RiNextjsLine key="nextjs" />,
+      <TbBrandTypescript key="typescript" />,
       <RiTailwindCssFill key="tailwind" />,
+      <SiShadcnui key="shadcn" />,
+      <SiClerk key="clerk" />,
     ],
   },
   {
     id: 2,
-    title: "Project Two",
-    description: "Description of project two.",
+    title: "file sherer app",
+    description: "file shere app. you can shere your file",
+    link: "",
+    image: fileShareAppImage.src,
     technology: [
       <FaReact key="react" />,
       <RiNextjsLine key="nextjs" />,
       <FaCss3Alt key="css" />,
+      <RiTailwindCssFill key="tailwind" />,
+      <TbBrandTypescript key="typescript" />,
     ],
   },
   {
     id: 3,
-    title: "Project Three",
-    description: "Description of project three.",
+    title: "movie app",
+    description: "there is a listed movis and details. used movie API",
+    link: "https://movi-app-one.vercel.app/",
+    image: movieApp.src,
     technology: [
       <FaReact key="react" />,
       <RiNextjsLine key="nextjs" />,
@@ -42,9 +57,11 @@ const projects = [
     ],
   },
   {
-    id: 3,
-    title: "Project Three",
-    description: "Description of project three.",
+    id: 4,
+    title: "movieApp",
+    description: "you can add your daily reminders",
+    link: "",
+    image: ToDoApp.src,
     technology: [
       <FaReact key="react" />,
       <RiNextjsLine key="nextjs" />,
@@ -53,9 +70,11 @@ const projects = [
     ],
   },
   {
-    id: 3,
-    title: "Project Three",
-    description: "Description of project three.",
+    id: 5,
+    title: "QR code generater",
+    description: "convert eny text to QR",
+    link: "https://qr-generator-blush.vercel.app/",
+    image: QR.src,
     technology: [
       <FaReact key="react" />,
       <RiNextjsLine key="nextjs" />,
