@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Project {
   title: string;
@@ -18,22 +19,17 @@ interface Project {
 
 const Card = ({ project }: { project: Project }) => {
   return (
-    <div>
-      <a
-        href={project.link}
-        className="block rounded-lg p-4 dark:bg-slate-600 dark:shadow-none shadow-sm shadow-indigo-100"
-      >
-        <div>
-          {project.image && (
-            <Image
-              alt={project.title}
-              src={project.image}
-              className="h-56 w-full rounded-md object-cover"
-              width={1770}
-              height={1180}
-            />
-          )}
-        </div>
+    <div className="block rounded-lg p-4 dark:bg-slate-600 dark:shadow-none shadow-sm shadow-indigo-100">
+      <Link href={project.link} passHref>
+        {project.image && (
+          <Image
+            alt={project.title}
+            src={project.image}
+            className="h-56 w-full rounded-md object-cover"
+            width={1770}
+            height={1180}
+          />
+        )}
         <div className="mt-2">
           <dl>
             <div>
@@ -54,7 +50,7 @@ const Card = ({ project }: { project: Project }) => {
             ))}
           </div>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };
