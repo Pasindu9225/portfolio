@@ -2,20 +2,41 @@ import React from "react";
 import Card from "../../components/ui/card";
 import { FaReact } from "react-icons/fa";
 import { RiNextjsLine } from "react-icons/ri";
+import { SiMongodb } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiShadcnui } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
 import { SiClerk } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { IoLogoJavascript } from "react-icons/io";
 import portfolio from "@/../../public/Screenshot (158).png";
 import fileShareAppImage from "@/../../public/Screenshot (143).png";
 import movieApp from "@/../../public/Screenshot (165).png";
 import ToDoApp from "@/../../public/Screenshot (132).png";
 import QR from "@/../../public/Screenshot (166).png";
+import Blog from "@/../../public/Screenshot (225).png";
+import Extention from "@/../../public/Screenshot (199).png";
 import { FaCss3Alt } from "react-icons/fa6";
 import { TbBrandTypescript } from "react-icons/tb";
 
 const projects = [
   {
     id: 1,
+    title: "MERN Blog App",
+    description: "CRUD operations with MERN stack blog app",
+    link: "",
+    image: Blog.src,
+    technology: [
+      <FaReact key="react" />,
+      <SiMongodb key="mongodb" />,
+      <FaNodeJs key="node" />,
+      <SiExpress key="express" />,
+      <RiTailwindCssFill key="tailwind" />,
+      <TbBrandTypescript key="typescript" />,
+    ],
+  },
+  {
+    id: 2,
     title: "portfolio",
     description: "I made my portfolio",
     image: portfolio.src,
@@ -30,7 +51,7 @@ const projects = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "file sherer app",
     description: "File shere app. You can share your file",
     link: "#",
@@ -44,7 +65,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "movie app",
     description: "There is a listed movies and details. Used movie API",
     link: "https://movi-app-one.vercel.app/",
@@ -57,7 +78,7 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "ToDo App",
     description: "You can add your daily reminders",
     link: "#",
@@ -70,7 +91,15 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
+    title: "Chrome Extension",
+    description: "You can change the background color",
+    link: "#",
+    image: Extention.src,
+    technology: [<IoLogoJavascript key="javascript" />],
+  },
+  {
+    id: 7,
     title: "QR code generator",
     description: "Convert any text to QR",
     link: "https://qr-generator-blush.vercel.app/",
