@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../../components/ui/card";
 import { FaReact } from "react-icons/fa";
-import { RiNextjsLine } from "react-icons/ri";
+import { RiDrizzleFill, RiNextjsLine } from "react-icons/ri";
 import { SiMongodb } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { SiShadcnui } from "react-icons/si";
@@ -16,8 +16,10 @@ import ToDoApp from "@/../../public/Screenshot (132).png";
 import QR from "@/../../public/Screenshot (166).png";
 import Blog from "@/../../public/Screenshot (225).png";
 import Extention from "@/../../public/Screenshot (199).png";
+import aiapp from "@/../../public/Screenshot (238).png";
 import { FaCss3Alt } from "react-icons/fa6";
 import { TbBrandTypescript } from "react-icons/tb";
+import { GiGemini } from "react-icons/gi";
 
 const projects = [
   {
@@ -31,6 +33,21 @@ const projects = [
       <SiMongodb key="mongodb" />,
       <FaNodeJs key="node" />,
       <SiExpress key="express" />,
+      <RiTailwindCssFill key="tailwind" />,
+      <TbBrandTypescript key="typescript" />,
+    ],
+  },
+  {
+    id: 2,
+    title: "Ai content creation app",
+    description: "You can create your content simpally using one prompt",
+    link: "",
+    image: aiapp.src,
+    technology: [
+      <FaReact key="react" />,
+      <SiClerk key="clerk" />,
+      <GiGemini key="gemini" />,
+      <RiDrizzleFill key="drizzle" />,
       <RiTailwindCssFill key="tailwind" />,
       <TbBrandTypescript key="typescript" />,
     ],
