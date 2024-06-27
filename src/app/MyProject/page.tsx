@@ -46,8 +46,6 @@ const projects = [
     technology: [
       <FaReact key="react" />,
       <SiClerk key="clerk" />,
-      <GiGemini key="gemini" />,
-      <RiDrizzleFill key="drizzle" />,
       <RiTailwindCssFill key="tailwind" />,
       <TbBrandTypescript key="typescript" />,
     ],
